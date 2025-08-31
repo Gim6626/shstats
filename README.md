@@ -34,17 +34,7 @@ Most common commands:
 8. black: 192 (1.9%)
 9. cat: 179 (1.8%)
 10. docker: 179 (1.8%)
-11. pytest: 148 (1.5%)
-12. vm: 132 (1.3%)
-13. find: 116 (1.2%)
-14. .: 107 (1.1%)
-15. dnf: 99 (1.0%)
-16. pipenv: 92 (0.9%)
-17. grep: 88 (0.9%)
-18. bash: 82 (0.8%)
-19. trash: 79 (0.8%)
-20. fab: 74 (0.7%)
-Least common commands count: 1475 (14.8%)
+Least common commands count: 2492 (24.9%)
 ```
 
 To see some customization options:

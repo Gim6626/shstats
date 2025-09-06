@@ -94,17 +94,13 @@ def main():
     history = get_history()
     total_count = get_history_count()
     commands = parse_commands(history, args.keep_sudo)
-    most_common_commands, least_common_count = get_most_common_commands(
-        commands, n=args.top_count
-    )
+    most_common_commands, least_common_count = get_most_common_commands(commands, n=args.top_count)
 
     print(f"Total history records: {total_count}")
     print("Most common commands:")
     for i, (command, count) in enumerate(most_common_commands):
         print(f"{i + 1}. {command}: {count} ({count / total_count:.1%})")
-    print(
-        f"Least common commands count: {least_common_count} ({least_common_count / total_count:.1%})"
-    )
+    print(f"Least common commands count: {least_common_count} ({least_common_count / total_count:.1%})")
 
 
 if __name__ == "__main__":

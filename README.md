@@ -22,19 +22,21 @@ $ python3 shstats.py
 
 Example output:
 ```
-Total history records: 10000
+"bash" shell found
+Total history records: 11158
+Total history records, including subcommands: 12346
 Most common commands:
-1. git: 4738 (47.4%)
-2. ssh: 602 (6.0%)
-3. cd: 425 (4.2%)
-4. ls: 361 (3.6%)
-5. vim: 335 (3.4%)
-6. python3: 291 (2.9%)
-7. scp: 203 (2.0%)
-8. black: 192 (1.9%)
-9. cat: 179 (1.8%)
-10. docker: 179 (1.8%)
-Least common commands count: 2492 (24.9%)
+1. git: 4972 (44.6%)
+2. grep: 967 (8.7%)
+3. ssh: 659 (5.9%)
+4. cd: 481 (4.3%)
+5. ls: 411 (3.7%)
+6. vim: 400 (3.6%)
+7. python3: 399 (3.6%)
+8. cat: 278 (2.5%)
+9. black: 238 (2.1%)
+10. scp: 197 (1.8%)
+Least common commands count: 3344 (30.0%)
 ```
 
 To see some customization options:

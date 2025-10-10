@@ -72,8 +72,13 @@ def parse_commands(history, keep_sudo):
         line = strip_timestamp(line)
         if not keep_sudo:
             line = line.replace("sudo", "")
-        command = line.strip().split()[0]
-        yield command
+        subcommands = (
+            subcommand.strip().split()[0]
+            for subcommand in line.strip().split('|')
+            if subcommand.strip()
+        )
+        for subcommand in subcommands:
+            yield subcommand
 
 
 def get_most_common_commands(commands, n=20):
@@ -97,6 +102,13 @@ def main():
     most_common_commands, least_common_count = get_most_common_commands(commands, n=args.top_count)
 
     print(f"Total history records: {total_count}")
+
+    total_count_including_subcommands = 0
+    for _, count in most_common_commands:
+        total_count_including_subcommands += count
+    total_count_including_subcommands += least_common_count
+    print(f"Total history records, including subcommands: {total_count_including_subcommands}")
+
     print("Most common commands:")
     for i, (command, count) in enumerate(most_common_commands):
         print(f"{i + 1}. {command}: {count} ({count / total_count:.1%})")
